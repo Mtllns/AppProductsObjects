@@ -42,3 +42,4 @@ class UI {
         }, 4000);
     }   
 }
+export default UI;

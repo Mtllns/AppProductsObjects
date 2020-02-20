@@ -1,3 +1,6 @@
+import Product from "../model/product.js";
+import UI from "../model/ui.js";
+
 
 // DOM Events
 document.getElementById('product-form').addEventListener("submit", function(e) { // function(e) la "e" viene de "event" que se utiliza más a bajo con un metodo.
@@ -9,8 +12,8 @@ document.getElementById('product-form').addEventListener("submit", function(e) {
     if ((name == "") || (price == "") || (year == "")) { // comprobamos si los campos estan vacios
         ui.showMessage('No se puede crear un Producto vacio, rellena los campos, por favor', 'danger'); // mensaje de alerta para que rellene los campos
     }else {
-        console.log("Name: "+ name + "\n" + "Price: " + price + "\n" + "Year: " + year);
-        console.log(new Product(name, price, year));
+        // console.log("Name: "+ name + "\n" + "Price: " + price + "\n" + "Year: " + year);
+        // console.log(new Product(name, price, year));
     
         const product = new Product(name, price, year); // instaciamos objeto producto
         
@@ -26,5 +29,5 @@ document.getElementById('product-form').addEventListener("submit", function(e) {
 document.getElementById('product-list').addEventListener('click', function(e){ // function(e) la "e" viene de "event"
     const ui = new UI();
     ui.deleteProduct(e.target);
-    console.log(e.target);
+    // console.log(e.target);
 });

@@ -5,3 +5,4 @@ class Product {
         this.year  = year;
     }
 }
+export default Product;
