@@ -7,7 +7,7 @@ document.getElementById('product-form').addEventListener("submit", function(e) {
     const name  = document.getElementById('name').value;
     const price = document.getElementById('price').valueAsNumber;
     const year  = document.getElementById('year').value;
-    const ui = new UI(); // instaciamos objeto UserInterface "UI"
+    const ui = new UI(); // instanciamos objeto UserInterface "UI"
 
     if ((name == "") || (price == "") || (year == "")) { // comprobamos si los campos estan vacios
         ui.showMessage('No se puede crear un Producto vacio, rellena los campos, por favor', 'danger'); // mensaje de alerta para que rellene los campos
@@ -15,7 +15,7 @@ document.getElementById('product-form').addEventListener("submit", function(e) {
         // console.log("Name: "+ name + "\n" + "Price: " + price + "\n" + "Year: " + year);
         // console.log(new Product(name, price, year));
     
-        const product = new Product(name, price, year); // instaciamos objeto producto
+        const product = new Product(name, price, year); // instanciamos objeto producto
         
         ui.addProduct(product);
         ui.resetForm(); // llamamos al metodo para limpiar el formulario

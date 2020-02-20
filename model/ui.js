@@ -27,7 +27,7 @@ class UI {
             this.showMessage('Product Delete Successfully', 'warning');
         }
     }
-    // metodo para mostrar mensaje cuando creamos producto, eliminamos o datos vacios.
+    // metodo para mostrar mensaje cuando creamos producto, eliminamos los datos vacios.
     showMessage(message, cssClass) {
         const div = document.createElement('div');
         div.className = `alert alert-${cssClass} mt-2`;
